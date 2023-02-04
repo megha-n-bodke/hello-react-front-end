@@ -1,5 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
-import Messagereducer from "./reducer";
+import { configureStore } from '@reduxjs/toolkit';
+import Messagereducer from './reducer';
 
 const store = configureStore({
   reducer: {

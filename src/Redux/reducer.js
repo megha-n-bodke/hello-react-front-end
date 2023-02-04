@@ -1,26 +1,23 @@
-import axios from "axios";
-
-const Data = "";
-const Url = "http://127.0.0.1:3000/api/messages";
+import axios from 'axios';
 
 const initialState = [];
 
-//reducer
+// reducer
 export default function Messagereducer(state = initialState, action) {
   switch (action.type) {
-    case "GET_MESSAGES":
+    case 'GET_MESSAGES':
       return action.payload;
     default:
       return state;
   }
 }
 
-//action
+// action
 export const getMessages = () => async (dispatch) => {
-  const { data } = await axios.get("http://127.0.0.1:3000/api/messages");
+  const { data } = await axios.get('http://127.0.0.1:3000/api/messages');
   console.log(data);
   dispatch({
-    type: "GET_MESSAGES",
+    type: 'GET_MESSAGES',
     payload: data[0],
   });
 };
